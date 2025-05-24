@@ -8,8 +8,8 @@ export function NavBar() {
         <a href="#about" className="hover:text-purple-400 transition-colors duration-300 text-sm sm:text-base">
           Sobre mim
         </a>
-        <a href="#education" className="hover:text-purple-400 transition-colors duration-300 text-sm sm:text-base">
-          Formação
+        <a href="#skills" className="hover:text-purple-400 transition-colors duration-300 text-sm sm:text-base">
+          Skills
         </a>
         <a href="#projects" className="hover:text-purple-400 transition-colors duration-300 text-sm sm:text-base">
           Projetos
@@ -17,13 +17,13 @@ export function NavBar() {
 
         {/* Ícones sociais com efeito neon */}
         <div className="flex flex-row gap-3 sm:gap-4 md:gap-5 ml-2 md:ml-4">
-          <a href="#" className="p-1.5 hover:text-purple-400 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.6)] transition-all duration-300">
+          <a href="https://github.com/arthurharysson" target="_blank"  className="p-1.5 hover:text-purple-400 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.6)] transition-all duration-300">
             <Github size={20} className="hover:scale-110 transition-transform" />
           </a>
-          <a href="#" className="p-1.5 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.6)] transition-all duration-300">
+          <a href="https://www.linkedin.com/in/arthurharysson/" target="_blank" className="p-1.5 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.6)] transition-all duration-300">
             <Linkedin size={20} className="hover:scale-110 transition-transform" />
           </a>
-          <a href="#" className="p-1.5 hover:text-red-400 hover:drop-shadow-[0_0_8px_rgba(248,113,113,0.6)] transition-all duration-300">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arthurharysson03@gmail.com" target="_blank"  rel= "noopener noreferrer" className="p-1.5 hover:text-red-400 hover:drop-shadow-[0_0_8px_rgba(248,113,113,0.6)] transition-all duration-300">
             <Mail size={20} className="hover:scale-110 transition-transform" />
           </a>
         </div>

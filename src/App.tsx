@@ -4,6 +4,7 @@ import AboutMe from './Components/AboutMe';
 import Photo from './Components/Photo';
 import TechStackCarousel from './Components/Stacks';
 import { Footer } from './Components/Footer';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 
 // Exemplo simples para Skills com barra de progresso
 const skills = [
@@ -13,10 +14,6 @@ const skills = [
   { name: 'Tailwind', level: 80 },
   { name: 'HTML', level: 80 },
   { name: 'CSS', level: 75 },
-  
-  { name: 'Node.js', level: 40 },
-
-  
 ];
 
 // Projetos para mostrar (exemplo)
@@ -27,47 +24,33 @@ const projects = [
     url: 'https://meuportfolio.com',
   },
   {
-    title: 'App de Tarefas',
-    description: 'Aplicativo React Native para gerenciar tarefas diárias.',
-    url: 'https://github.com/usuario/app-tarefas',
+    title: 'FutBolão',
+    description: 'Aplicativo React Native para fazer palpites de jogos de futebol e acompanhar resultados em tempo real.',
+    url: 'https://github.com/arthurharysson/FutBolao',
   },
   {
-    title: 'Blog Tech',
-    description: 'Blog sobre desenvolvimento e tecnologias modernas.',
-    url: 'https://blogtech.com',
+    title: 'InterApp',
+    description: 'Aplicativo de gerenciamento e pagamento de faturas de sistemas de automação',
+    url: 'https://github.com/arthurharysson/InterApp',
   },
 ];
 
 // Links para o NavBar com âncoras
 const navLinks = [
-  { name: 'Sobre', href: '#sobre' },
+  { name: 'Sobre', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Projetos', href: '#projetos' },
+  { name: 'Projetos', href: '#projects' },
   { name: 'Contato', href: '#contato' },
 ];
 
 function App() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [formStatus, setFormStatus] = useState('');
-
-  function handleInput(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    // Simula envio
-    setFormStatus('Mensagem enviada com sucesso! Obrigado.');
-    setFormData({ name: '', email: '', message: '' });
-  }
-
   return (
     <div className="bg-neutral-900 min-h-screen font-mono text-gray-100 overflow-x-hidden">
       {/* NavBar corrigida com links */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-neutral-900/95 shadow-md shadow-fuchsia-700/30">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <div className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-600 cursor-default">
-           Arthur Harysson - Portfólio
+            Arthur Harysson - Portfólio
           </div>
           <NavBar links={navLinks} />
         </div>
@@ -76,7 +59,7 @@ function App() {
       <main className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 scroll-smooth">
         {/* HERO */}
         <section
-          id="sobre"
+          id="about"
           className="grid grid-cols-1 lg:grid-cols-2 items-center gap-20 pt-20 pb-32"
         >
           {/* About Me */}
@@ -156,7 +139,7 @@ function App() {
         </section>
 
         {/* Projetos */}
-        <section id="projetos" className="mb-28 max-w-5xl mx-auto px-4 sm:px-0">
+        <section id="projects" className="mb-28 max-w-5xl mx-auto px-4 sm:px-0">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-14 bg-gradient-to-r from-purple-300 to-fuchsia-600 text-transparent bg-clip-text">
             Projetos em Destaque
           </h2>
@@ -179,75 +162,53 @@ function App() {
         {/* Contato */}
         <section id="contato" className="mb-20 max-w-3xl mx-auto px-4 sm:px-0">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-purple-300 to-fuchsia-600 text-transparent bg-clip-text">
-            Contato Rápido
+            Contate-me
           </h2>
 
-          <form
-            onSubmit={handleSubmit}
-            className="bg-neutral-800 rounded-xl p-8 shadow-lg shadow-purple-900/30"
-          >
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-gray-300 mb-2 font-semibold">
-                Nome
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                value={formData.name}
-                onChange={handleInput}
-                className="w-full px-4 py-3 rounded-md bg-neutral-700 text-gray-100 border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="Seu nome completo"
-              />
-            </div>
+          <div className="bg-neutral-800 rounded-xl p-8 shadow-lg shadow-purple-900/30 text-gray-100 text-center space-y-6">
+            <p className="text-lg font-semibold">
+              Você pode me encontrar nas redes sociais ou enviar um email direto:
+            </p>
 
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-gray-300 mb-2 font-semibold">
-                E-mail
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={formData.email}
-                onChange={handleInput}
-                className="w-full px-4 py-3 rounded-md bg-neutral-700 text-gray-100 border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="seu.email@example.com"
-              />
-            </div>
-
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-gray-300 mb-2 font-semibold">
-                Mensagem
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                required
-                value={formData.message}
-                onChange={handleInput}
-                className="w-full px-4 py-3 rounded-md bg-neutral-700 text-gray-100 border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
-                placeholder="Escreva sua mensagem..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-fuchsia-600 hover:to-purple-600 transition-colors py-3 rounded-md font-bold text-white shadow-lg"
-            >
-              Enviar
-            </button>
-
-            {formStatus && (
-              <p className="mt-4 text-green-400 font-semibold text-center">{formStatus}</p>
-            )}
-          </form>
+            <ul className="flex flex-col sm:flex-row justify-center gap-8 text-xl font-semibold">
+              <li>
+                <a
+                  href="https://www.instagram.com/arthurharysson/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-400 transition-colors flex items-center gap-2"
+                >
+                  <Instagram size={24} />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/arthurharysson/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-400 transition-colors flex items-center gap-2"
+                >
+                  <Linkedin size={24} />
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=arthurharysson03@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-400 transition-colors flex items-center gap-2">
+                  <Mail size={24} />
+                  Email
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

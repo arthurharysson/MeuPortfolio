@@ -5,11 +5,11 @@ export function Footer() {
   return (
     <footer className="bg-neutral-900 border-t border-purple-700/50 py-8 mt-16">
       <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm select-none">
-        <p>© {new Date().getFullYear()} MeuPortfólio. Todos os direitos reservados.</p>
+        <p>© {new Date().getFullYear()} Arthur Harysson. Todos os direitos reservados.</p>
 
         <nav className="flex space-x-6 mt-4 sm:mt-0">
           <a
-            href="#sobre"
+            href="#about"
             className="hover:text-purple-600 transition-colors"
           >
             Sobre
@@ -21,7 +21,7 @@ export function Footer() {
             Skills
           </a>
           <a
-            href="#projetos"
+            href="#projects"
             className="hover:text-purple-600 transition-colors"
           >
             Projetos
@@ -36,7 +36,7 @@ export function Footer() {
 
         <div className="flex space-x-6 mt-6 sm:mt-0">
           <a
-            href="https://www.linkedin.com/in/seu-perfil"
+            href="https://www.linkedin.com/in/arthurharysson/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -45,14 +45,15 @@ export function Footer() {
             <Linkedin size={24} />
           </a>
           <a
-            href="mailto:seuemail@example.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=arthurharysson03@gmail.com"
             aria-label="Email"
+            target="_blank"
             className="text-gray-400 hover:text-purple-600 transition-colors"
           >
             <Mail size={24} />
           </a>
           <a
-            href="https://github.com/seuusuario"
+            href="https://github.com/arthurharysson"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
