@@ -62,6 +62,29 @@ const techStacks = [
     name: 'GitHub', 
     icon: <Github className="text-gray-800 dark:text-gray-200 w-28 h-28" />
   },
+
+  {
+    id: 8,
+  name: 'HTML',
+  icon: (
+    <img 
+       src="/logos/html.svg" 
+        alt="Tailwind CSS" 
+        className="w-28 h-28 object-contain"
+        onError={(e) => e.currentTarget.src = '/logos/default.svg'}  />
+  )
+  },
+  { 
+    id: 9, 
+    name: 'CSS', 
+    icon: (
+      <img 
+       src="/logos/css.svg" 
+        alt="Tailwind CSS" 
+        className="w-28 h-28 object-contain"
+        onError={(e) => e.currentTarget.src = '/logos/default.svg'} />
+    )
+  },
 ];
 
 const TechStackCarousel = () => {

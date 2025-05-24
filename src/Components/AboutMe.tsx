@@ -7,10 +7,9 @@ export default function AboutMe() {
     <h2 className="text-fuchsia-800 font-extrabold text-2xl" >Front-End & Mobile Developer</h2>
     <div className="text-gray-500 py-2.5">
         <p className="font-bold">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br/>
-            Dignissimos velit exercitationem nesciunt amet laborum!<br/>
-            Fuga, architecto temporibus omnis excepturi aliquam numquam sunt <br/>
-            quae veritatis natus delectus nihil maiores ipsam cupiditate!
+          Sou desenvolvedor focado em React Native, apaixonado por criar apps intuitivos, funcionais e visualmente atraentes. Tenho experiência prática com dois projetos principais: o FutBolão, um app de palpites para campeonatos de futebol, e o InterApp, que oferece soluções completas para múltiplos clientes com gerenciamento eficiente.
+
+          Minhas habilidades incluem desenvolvimento mobile, consumo de APIs REST, design responsivo e uso de bibliotecas modernas para otimizar performance e experiência do usuário. Busco sempre escrever código limpo e escalável, focado em entregar valor real.
         </p>
     </div>
 
